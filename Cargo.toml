@@ -1,0 +1,16 @@
+[package]
+name = "unified_wasm_lib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+sha3 = "0.10"
+specta = { version = "1.0.5", features = ["typescript", "time", "uuid", "functions"] }
+serde = { version = "1.0.219", features = ["serde_derive"] }
+time = "0.3.4"
+spacetimedb = "1.1.2"
+uuid = { version = "1.16.0", default-features = false, features = ["serde"] }
